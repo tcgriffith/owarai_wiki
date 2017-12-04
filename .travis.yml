@@ -6,18 +6,18 @@ cache: packages
 
 before_install:
 
+  - git config credential.helper "store --file=.git/credentials"; echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials 2>/dev/null
   - git config --global user.email "ztc.ustcer@gmail.com"
-  - git config --global user.name "TC"
+  - git config --global user.name "tcgriffith"
+
 
 script:
   - Rscript R/aaa.R
 
-deploy: 
-  skip_cleanup: true 
-  github_token: $GITHUB_TOKEN 
 
-after_deploy:
+
+after_success:
   - git submodule update --remote
   - git add --all *
   - git commit -m "Daily update"
-  - git push https://${GITHUB_PAT}github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
+  - git push https://${GITHUB_TOKEN}:@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
