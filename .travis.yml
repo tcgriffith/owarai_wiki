@@ -2,10 +2,11 @@
 before_deploy:
   - git config --global user.email "ztc.ustcer@gmail.com"
   - git config --global user.name "TC"
+  - git submodule update --remote
 
 deploy: 
   skip_cleanup: true
-  - git submodule update --remote
+  
   
 
 after_deploy:
