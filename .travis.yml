@@ -10,7 +10,7 @@ before_install:
   - git submodule update --remote
   - git add --all *
   - git commit -m "Daily update"
-  - git push https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
+  - git push https://${GITHUB_PAT}github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
 
 script:
   - Rscript R/aaa.R
