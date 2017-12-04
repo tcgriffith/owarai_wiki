@@ -6,6 +6,10 @@ pandoc: false
 before_install:
   - git config --global user.email "ztc.ustcer@gmail.com"
   - git config --global user.name "TC"
+  - git submodule update --remote
+
+script:
+  - Rscript R/aaa.R
 
 after_success:
   - git add --all *
