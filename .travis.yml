@@ -5,13 +5,19 @@ pandoc: false
 cache: packages
 
 before_install:
+
   - git config --global user.email "ztc.ustcer@gmail.com"
   - git config --global user.name "TC"
-  - git submodule update --remote
-  - git add --all *
-  - git commit -m "Daily update"
-  - git push https://${GITHUB_PAT}github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
 
 script:
   - Rscript R/aaa.R
 
+deploy: 
+  skip_cleanup: true 
+  github_token: $GITHUB_TOKEN 
+
+after_deploy:
+  - git submodule update --remote
+  - git add --all *
+  - git commit -m "Daily update"
+  - git push https://${GITHUB_PAT}github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
