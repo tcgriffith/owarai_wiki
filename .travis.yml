@@ -1,0 +1,14 @@
+
+before_deploy:
+  - git config --global user.email "ztc.ustcer@gmail.com"
+  - git config --global user.name "TC"
+
+deploy: 
+  skip_cleanup: true
+  - git submodule update --remote
+  
+
+after_deploy:
+  - git add --all *
+  - git commit -m"Daily update"
+  - git push -q https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
