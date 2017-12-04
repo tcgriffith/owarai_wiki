@@ -2,6 +2,7 @@ language: r
 sudo: false
 latex: false
 pandoc: false
+cache: packages
 
 before_install:
   - git config --global user.email "ztc.ustcer@gmail.com"
