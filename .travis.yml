@@ -8,11 +8,10 @@ before_install:
   - git config --global user.email "ztc.ustcer@gmail.com"
   - git config --global user.name "TC"
   - git submodule update --remote
+  - git add --all *
+  - git commit -m "Daily update"
+  - git push https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
 
 script:
   - Rscript R/aaa.R
 
-after_success:
-  - git add --all *
-  - git commit -m"Daily update"
-  - git push -q https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master
