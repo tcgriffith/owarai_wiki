@@ -7,7 +7,7 @@ theme = "docdock"
 themesdir = "themes"
 
 [params]
-editURL = "https://github.com/tcgriffith/owarai_wiki/edit/master/content/"
+editURL = "https://github.com/tcgriffith/owarai_wiki/wiki"
 showVisitedLinks = true # default is false
 themeStyle = "original" # "original" or "flex" # default "original"
 themeVariant = "blue" # choose theme variant "green", "gold" , "gray", "blue" (default)
