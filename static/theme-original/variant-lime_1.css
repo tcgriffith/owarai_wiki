@@ -1,4 +1,4 @@
-/*
+
 :root{
     --SIDE-MAIN-color: #465c96;
     --SIDE-MAIN-TXT-color: #fff;
@@ -9,8 +9,8 @@
     --MENU-ACTIVE-BACK-color: #b3373d;
     --MENU-ACTIVE-LINK-color: white;
     --BF-color: white;
-}*/
-
+}
+/*
 :root{
     --SIDE-MAIN-color: #465c96;
     --SIDE-MAIN-TXT-color: #902a2a;
@@ -23,7 +23,7 @@
     --BF-color: #ff2828;
 
 }
-
+*/
 
 a, #sidebar ul li.visited > a .read-icon {
     color: var(--SIDE-MAIN-color);
