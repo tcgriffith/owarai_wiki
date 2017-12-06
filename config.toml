@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 
-title = "asdfasdf"
+title = "Owaraipedia | 笑神百科"
 theme = "docdock"
 themesdir = "themes"
 
