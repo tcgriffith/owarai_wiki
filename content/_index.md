@@ -16,7 +16,12 @@ alwaysopen = true
 本wiki的主题为日本搞笑艺人的科普~~安利~~, 主要内容覆盖：
 
 
-{{% children description="true"   %}}
+
+[搞笑艺人](geinin/)
+
+[综艺](bangumi/)
+
+[背景](background/)
 
 
 
