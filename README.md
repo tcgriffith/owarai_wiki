@@ -7,7 +7,7 @@ Long live the owaraipedia!
 
 You can edit the page through the link "improve this page" at the top right corner.
 
-The github wiki is obsoleted.
+The github wiki is obsoleted so don't bother editing that thing.
 
 
 
